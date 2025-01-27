@@ -5,17 +5,26 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --faint-bg: #ffffffbb;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+[data-theme="dark"] {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --faint-bg: #000000bb;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.border-color {
+  border-color: var(--foreground);
+}
+
+.navbar-bg {
+  background: var(--faint-bg);
+  backdrop-filter: blur(6px);
 }
