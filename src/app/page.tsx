@@ -6,15 +6,10 @@ import About from "./About";
 import Skills from "./Skills";
 import Projects from "./Projects";
 import React from "react";
-import Git from "./icons/Git";
-import { useTheme } from "next-themes";
-import LinkedIn from "./icons/LinkedIn";
-import Gmail from "./icons/Gmail";
+import Contact from "./Contact";
 
 export default function Home() {
   const container = React.useRef(null);
-  const [tl, setTl] = React.useState<null | gsap.core.Timeline>(null);
-  const { theme } = useTheme();
 
   useGSAP(
     () => {
@@ -34,17 +29,6 @@ export default function Home() {
         .to(element, { duration: 0.5 })
         .to(element, { duration: 0, opacity: 0 })
         .to(element, { duration: 0.2 });
-
-      const timeline = gsap.timeline({ paused: true }).to("#resume", {
-        borderRadius: 14,
-        backgroundColor: "#fff",
-        color: "#000",
-        border: "1px solid black",
-        duration: 0.2,
-        textDecoration: "underline",
-      });
-
-      setTl(timeline);
     },
     { scope: container }
   );
@@ -55,58 +39,25 @@ export default function Home() {
       ref={container}
     >
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <section className="flex min-h-[40vh] w-screen justify-center items-center  max-sm:flex-col">
+        <section className="flex min-h-screen w-screen justify-center items-center max-sm:flex-col">
           <div className="flex max-w-[1400px] w-full">
             <div className="flex w-1/2 h-[600px] justify-center items-center relative overfloe-hidden p-24 max-sm:hidden">
               <Image
                 src="/test.jpg"
                 alt="image"
-                className="object-cover"
-                width={800}
-                height={800}
+                className="object-cover object-[80%]"
+                fill
               />
             </div>
             <div className="flex jutify-center flex-col w-1/2 max-sm:w-full p-24 max-sm:p-12 max-sm:h-[80vh]">
-              <h2 className="text-[120px] max-sm:text-[25vw] font-[800] leading-[130px] max-sm:leading-[27vw] mb-8">
-                Hi, I'm <br />
-                Tom<span id="header-underscore">_</span>
+              <h2 className="text-[120px] max-sm:text-[25vw] font-[800] leading-[130px] max-sm:leading-[27vw] mb-4">
+                Hi, I'm Tom<span id="header-underscore">_</span>
               </h2>
 
-              <p className="font-semibold text-xl">
+              <p className="font-semibold text-xl mb-14">
                 {`["Full-Stack Developer", "Software Engineer"]`}
               </p>
-            </div>
-          </div>
-        </section>
-
-        <section className="flex w-screen justify-center items-center max-sm:flex-col">
-          <div className="flex w-full flex-col items-center max-w-[1400px]">
-            <button
-              onMouseEnter={() => {
-                if (tl) {
-                  tl.play();
-                }
-              }}
-              onMouseLeave={() => {
-                if (tl) {
-                  tl.reverse();
-                }
-              }}
-              id="resume"
-              className={`bg-black border-[1px] border-black text-white px-8 py-6 text-xl font-bold mb-12 ${
-                theme === "dark" ? "invert" : ""
-              }`}
-            >
-              My Resume
-            </button>
-
-            <div className="w-full flex gap-8 justify-center">
-              <Git size={60} link="https://github.com/The-Orange-Dot" />
-              <LinkedIn
-                size={60}
-                link="https://www.linkedin.com/in/tom-le-dev/"
-              />
-              <Gmail size={60} link="mailto:lethomas710@gmail.com" />
+              <Contact />
             </div>
           </div>
         </section>

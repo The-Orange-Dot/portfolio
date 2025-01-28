@@ -53,7 +53,6 @@ const NavBar = () => {
             <label className="inline-flex items-center cursor-pointer link invisible">
               <input
                 type="checkbox"
-                value=""
                 className="sr-only peer"
                 onChange={() => setTheme(theme === "dark" ? "light" : "dark")}
               />

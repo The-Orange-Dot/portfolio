@@ -3,7 +3,7 @@ import React from "react";
 const About = () => {
   return (
     <section className="w-screen flex flex-col items-center">
-      <div className="w-full  max-w-[1400px] min-h-[800px]">
+      <div className="w-full  max-w-[1300px] min-h-[800px]">
         <span className="font-bold text-xl">{`<Introduction />`}</span>
         <h2 className="text-[80px] font-black mb-12">about_me</h2>
 
