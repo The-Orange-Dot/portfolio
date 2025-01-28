@@ -28,3 +28,7 @@ body {
   background: var(--faint-bg);
   backdrop-filter: blur(6px);
 }
+
+.reverse-bg-color {
+  background: var(--foreground);
+}

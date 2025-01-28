@@ -88,7 +88,7 @@ export default function Home() {
             <div id="header-image-container" className="w-1/2 max-sm:hidden">
               <div
                 id="header-image"
-                className="flex w-0 h-[80vh] max-h-[500px] justify-center items-center relative relative"
+                className="flex w-0 max-w-[700px] h-[80vh] max-h-[500px] justify-center items-center relative relative"
               >
                 <Image
                   src="/test.jpg"
