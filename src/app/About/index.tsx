@@ -1,8 +1,42 @@
+"use client";
+import Image from "next/image";
 import React from "react";
+import { useGSAP } from "@gsap/react";
+import { gsap } from "gsap/gsap-core";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const About = () => {
+  const container = React.useRef(null);
+
+  useGSAP(
+    () => {
+      gsap.registerPlugin(ScrollTrigger);
+
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: "#self-portrait",
+            start: "25% center",
+            toggleActions: "play none none reverse",
+          },
+        })
+        .to("#self-portrait", { x: "28vw", width: "100%", opacity: 0.15 });
+    },
+    { scope: container }
+  );
+
   return (
-    <section className="w-screen flex flex-col items-center">
+    <section
+      className="w-screen flex flex-col items-center relative"
+      ref={container}
+    >
+      <Image
+        className="absolute z-[-100] object-contain translate-x-[30vw] translate-y-[-10vh] opacity-0"
+        src="/hung_le_self_portrait.jpg"
+        alt="Self-portrait of Tom Le"
+        id="self-portrait"
+        fill
+      />
       <div className="w-full  max-w-[1300px] min-h-[800px]">
         <span className="font-bold text-xl">{`<Introduction />`}</span>
         <h2 className="text-[80px] font-black mb-12">about_me</h2>
@@ -24,6 +58,12 @@ const About = () => {
             into the nitty-gritty of front-end and back-end integration,
             I&apos;m always excited to tackle new challenges and create
             something meaningful.
+          </p>
+
+          <p className="text-xl leading-[32px]">
+            When I’m not coding, you’ll often find me behind a camera, capturing
+            moments and exploring the world through photography—a creative
+            outlet that keeps me inspired and balanced.
           </p>
 
           <p className="text-xl leading-[32px]">

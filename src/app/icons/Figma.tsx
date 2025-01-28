@@ -3,7 +3,8 @@ import React from "react";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap/gsap-core";
 import { SplitText } from "gsap/SplitText";
-const Tailwind = ({ size = 100 }: { size?: number }) => {
+
+const Figma = ({ size = 100 }: { size?: number }) => {
   const container = React.useRef(null);
   const [tl, setTl] = React.useState<null | gsap.core.Timeline>(null);
 
@@ -25,27 +26,43 @@ const Tailwind = ({ size = 100 }: { size?: number }) => {
       <svg
         width={`${size}`}
         height={`${size}`}
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 128 128"
         onMouseEnter={() => {
           tl?.play();
         }}
         onMouseLeave={() => {
           tl?.reverse();
         }}
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 128 128"
       >
         <path
-          d="M64.004 25.602c-17.067 0-27.73 8.53-32 25.597 6.398-8.531 13.867-11.73 22.398-9.597 4.871 1.214 8.352 4.746 12.207 8.66C72.883 56.629 80.145 64 96.004 64c17.066 0 27.73-8.531 32-25.602-6.399 8.536-13.867 11.735-22.399 9.602-4.87-1.215-8.347-4.746-12.207-8.66-6.27-6.367-13.53-13.738-29.394-13.738zM32.004 64c-17.066 0-27.73 8.531-32 25.602C6.402 81.066 13.87 77.867 22.402 80c4.871 1.215 8.352 4.746 12.207 8.66 6.274 6.367 13.536 13.738 29.395 13.738 17.066 0 27.73-8.53 32-25.597-6.399 8.531-13.867 11.73-22.399 9.597-4.87-1.214-8.347-4.746-12.207-8.66C55.128 71.371 47.868 64 32.004 64zm0 0"
-          fill="#38bdf8"
+          fill="#0acf83"
+          d="M45.5 129c11.9 0 21.5-9.6 21.5-21.5V86H45.5C33.6 86 24 95.6 24 107.5S33.6 129 45.5 129zm0 0"
+        />
+        <path
+          fill="#a259ff"
+          d="M24 64.5C24 52.6 33.6 43 45.5 43H67v43H45.5C33.6 86 24 76.4 24 64.5zm0 0"
+        />
+        <path
+          fill="#f24e1e"
+          d="M24 21.5C24 9.6 33.6 0 45.5 0H67v43H45.5C33.6 43 24 33.4 24 21.5zm0 0"
+        />
+        <path
+          fill="#ff7262"
+          d="M67 0h21.5C100.4 0 110 9.6 110 21.5S100.4 43 88.5 43H67zm0 0"
+        />
+        <path
+          fill="#1abcfe"
+          d="M110 64.5c0 11.9-9.6 21.5-21.5 21.5S67 76.4 67 64.5 76.6 43 88.5 43 110 52.6 110 64.5zm0 0"
         />
       </svg>
       <span className="overflow-hidden">
         <p className="translate-y-[20px] text text-xs tracking-[1px] mt-1">
-          Tailwind
+          Figma
         </p>
       </span>
     </div>
   );
 };
 
-export default Tailwind;
+export default Figma;
