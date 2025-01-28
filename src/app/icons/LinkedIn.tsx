@@ -8,7 +8,12 @@ const LinkedIn = ({
   link: string;
 }) => {
   return (
-    <a href={link} target="_blank" rel="noopener noreferrer">
+    <a
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="contact-icon invisible"
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         x="0px"
@@ -16,6 +21,7 @@ const LinkedIn = ({
         width={`${size * 1.2}`}
         height={`${size * 1.2}`}
         viewBox="0 5 44 44"
+        className="hover:opacity-50"
       >
         <path
           fill="#0288D1"

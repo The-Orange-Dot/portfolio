@@ -13,22 +13,66 @@ export default function Home() {
 
   useGSAP(
     () => {
-      const element = document.getElementById("header-underscore");
+      const contactIcons = document.querySelectorAll(".contact-icon");
 
-      //Animation for blinking underscore
       gsap
-        .timeline({
-          repeat: -1,
-          yoyo: true,
-          delay: 1,
+        .timeline()
+        .to("#header-title", {
+          text: `Hi, I'm Tom<span id="header-underscore">_</span>`,
+          duration: 1,
+          ease: "linear",
+          onComplete: () => {
+            const element = document.getElementById("header-underscore");
+
+            //Animation for blinking underscore
+            gsap
+              .timeline({
+                repeat: -1,
+                yoyo: true,
+              })
+              .to(element, {
+                opacity: 1,
+                duration: 0,
+              })
+              .to(element, { duration: 0.5 })
+              .to(element, { duration: 0, opacity: 0 })
+              .to(element, { duration: 0.2 });
+
+            const sensitivity = 0.01;
+            window.addEventListener("mousemove", (e) => {
+              // Get the mouse position relative to the center of the screen
+              const mouseX = e.clientX - window.innerWidth / 2;
+              const mouseY = e.clientY - window.innerHeight / 2;
+
+              // Calculate the image's new position (opposite direction)
+              const moveX = -mouseX * sensitivity;
+              const moveY = -mouseY * sensitivity;
+
+              // Use GSAP to animate the image's position
+              gsap.to("#header-image-container", {
+                x: moveX,
+                y: moveY,
+                duration: 0.5, // Smooth transition
+                ease: "power2.out",
+              });
+            });
+          },
         })
-        .to(element, {
-          opacity: 1,
-          duration: 0,
+        .to("#header-image", { width: 600, delay: 2 })
+        .to("#nacchan-text", {
+          text: `{ "name": "Nacchan", "breed": "Holland Lop", "colors": ["brown", "white"] }`,
+          duration: 2,
         })
-        .to(element, { duration: 0.5 })
-        .to(element, { duration: 0, opacity: 0 })
-        .to(element, { duration: 0.2 });
+        .to(
+          "#role-subtitle",
+          {
+            text: `["Full-Stack Developer", "Software Engineer"]`,
+            duration: 1,
+          },
+          "<"
+        )
+        .to("#resume", { autoAlpha: 1 }, "<")
+        .to(contactIcons, { autoAlpha: 1, stagger: 0.3 });
     },
     { scope: container }
   );
@@ -41,21 +85,33 @@ export default function Home() {
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
         <section className="flex min-h-screen w-screen justify-center items-center max-sm:flex-col">
           <div className="flex max-w-[1400px] w-full">
-            <div className="flex w-1/2 h-[600px] justify-center items-center relative overfloe-hidden p-24 max-sm:hidden">
-              <Image
-                src="/test.jpg"
-                alt="image"
-                className="object-cover object-[80%]"
-                fill
-              />
+            <div id="header-image-container" className="w-1/2">
+              <div
+                id="header-image"
+                className="flex w-0 h-[600px] justify-center items-center relative max-sm:hidden relative"
+              >
+                <Image
+                  src="/test.jpg"
+                  alt="image"
+                  className="object-cover object-[80%]"
+                  fill
+                />
+                <p
+                  id="nacchan-text"
+                  className="translate-y-6 absolute bottom-0 text-sm"
+                >{``}</p>
+              </div>
             </div>
             <div className="flex jutify-center flex-col w-1/2 max-sm:w-full p-24 max-sm:p-12 max-sm:h-[80vh]">
-              <h2 className="text-[120px] max-sm:text-[25vw] font-[800] leading-[130px] max-sm:leading-[27vw] mb-4">
-                Hi, I'm Tom<span id="header-underscore">_</span>
+              <h2
+                className="text-[120px] max-sm:text-[25vw] font-[800] leading-[130px] max-sm:leading-[27vw] mb-4"
+                id="header-title"
+              >
+                <span id="header-underscore">_</span>
               </h2>
 
-              <p className="font-semibold text-xl mb-14">
-                {`["Full-Stack Developer", "Software Engineer"]`}
+              <p className="font-semibold text-xl mb-14" id="role-subtitle">
+                {``}
               </p>
               <Contact />
             </div>

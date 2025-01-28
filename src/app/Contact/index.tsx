@@ -6,6 +6,7 @@ import LinkedIn from "../icons/LinkedIn";
 import Gmail from "../icons/Gmail";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap/gsap-core";
+import { TextPlugin } from "gsap/TextPlugin";
 
 const Contact = () => {
   const container = React.useRef(null);
@@ -14,6 +15,8 @@ const Contact = () => {
 
   useGSAP(
     () => {
+      gsap.registerPlugin(TextPlugin);
+
       const timeline = gsap.timeline({ paused: true }).to("#resume", {
         borderRadius: 14,
         backgroundColor: "#fff",
@@ -21,6 +24,11 @@ const Contact = () => {
         border: "1px solid black",
         duration: 0.2,
         textDecoration: "underline",
+        text: {
+          value: "Download",
+          padSpace: true,
+          preserveSpaces: true,
+        },
       });
 
       setTl(timeline);
@@ -47,7 +55,7 @@ const Contact = () => {
               }
             }}
             id="resume"
-            className={`bg-black border-[1px] border-black text-white px-4 py-2 text-xl font-bold mb-6 ${
+            className={`bg-black border-[1px] border-black text-white px-4 py-2 text-xl font-bold mb-6 w-40 invisible ${
               theme === "dark" ? "invert" : ""
             }`}
           >

@@ -2,7 +2,12 @@ import React from "react";
 
 const Gmail = ({ size = 100, link = "#" }: { size?: number; link: string }) => {
   return (
-    <a href={link} target="_blank" rel="noopener noreferrer">
+    <a
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="contact-icon invisible"
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         x="0px"
@@ -10,6 +15,7 @@ const Gmail = ({ size = 100, link = "#" }: { size?: number; link: string }) => {
         width={`${size}`}
         height={`${size}`}
         viewBox="0 0 48 48"
+        className="hover:opacity-50"
       >
         <path
           fill="#4caf50"

@@ -17,7 +17,7 @@ const NavBar = () => {
       const title = new SplitText("#title", { type: "chars" });
 
       gsap
-        .timeline({ delay: 1 })
+        .timeline({ delay: 2 })
         .to("#navBody", { left: 0 })
         .to(title.chars, { y: -80, stagger: 0.1 })
         .to(links, { autoAlpha: 1, stagger: 0.2 }, ">0.3");

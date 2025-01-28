@@ -6,14 +6,19 @@ const Git = ({ size = 100, link = "#" }: { size?: number; link: string }) => {
   const { theme } = useTheme();
 
   return (
-    <a href={link} target="_blank" rel="noopener noreferrer">
+    <a
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="contact-icon invisible"
+    >
       <svg
         width={`${size}`}
         height={`${size}`}
         viewBox="0 0 100 100"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className={`${theme === "dark" ? "invert" : ""}`}
+        className={`${theme === "dark" ? "invert" : ""} hover:opacity-50`}
       >
         <g id="github">
           <g id="github_2">
