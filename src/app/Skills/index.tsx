@@ -15,13 +15,44 @@ import Vercel from "../icons/Vercel";
 import Cloudflare from "../icons/Cloudflare";
 import Photoshop from "../icons/Photoshop";
 import Canva from "../icons/Canva";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { TextPlugin } from "gsap/TextPlugin";
+import { useGSAP } from "@gsap/react";
+import { gsap } from "gsap/gsap-core";
 
 const Skills = () => {
+  const container = React.useRef(null);
+
+  useGSAP(() => {
+    gsap.registerPlugin(ScrollTrigger, TextPlugin);
+
+    const intros = gsap.utils.toArray(".skills-text");
+    const texts = ["&ltSkills /&gt", "tech_stack"];
+
+    intros.forEach((intro, index) => {
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: intro as any,
+            start: "bottom bottom",
+          },
+        })
+        .to(intro as any, {
+          text: texts[index],
+          duration: 1,
+        });
+    });
+  });
+
   return (
-    <section className="w-screen flex flex-col items-center">
-      <div className="w-full  max-w-[1300px] min-h-[800px]">
-        <span className="font-bold text-xl">{`<Skills />`}</span>
-        <h2 className="text-[80px] font-black mb-12">tech_stack</h2>
+    <section
+      id="skills"
+      className="w-screen flex flex-col items-center"
+      ref={container}
+    >
+      <div className="w-full max-w-[1300px] min-h-[800px]">
+        <span className="font-bold text-xl skills-text">{`.`}</span>
+        <h2 className="text-[80px] font-black mb-12 skills-text">.</h2>
 
         <h3 className="text-xl font-bold">{`["Languages"]`}</h3>
         <div className="flex gap-8 py-2">

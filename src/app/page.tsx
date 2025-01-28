@@ -38,29 +38,29 @@ export default function Home() {
               .to(element, { duration: 0, opacity: 0 })
               .to(element, { duration: 0.2 });
 
-            const sensitivity = 0.01;
-            window.addEventListener("mousemove", (e) => {
-              // Get the mouse position relative to the center of the screen
-              const mouseX = e.clientX - window.innerWidth / 2;
-              const mouseY = e.clientY - window.innerHeight / 2;
+            // const sensitivity = 0.01;
+            // window.addEventListener("mousemove", (e) => {
+            //   // Get the mouse position relative to the center of the screen
+            //   const mouseX = e.clientX - window.innerWidth / 2;
+            //   const mouseY = e.clientY - window.innerHeight / 2;
 
-              // Calculate the image's new position (opposite direction)
-              const moveX = -mouseX * sensitivity;
-              const moveY = -mouseY * sensitivity;
+            //   // Calculate the image's new position (opposite direction)
+            //   const moveX = -mouseX * sensitivity;
+            //   const moveY = -mouseY * sensitivity;
 
-              // Use GSAP to animate the image's position
-              gsap.to("#header-image-container", {
-                x: moveX,
-                y: moveY,
-                duration: 0.5, // Smooth transition
-                ease: "power2.out",
-              });
-            });
+            //   // Use GSAP to animate the image's position
+            //   gsap.to("#header-image-container", {
+            //     x: moveX,
+            //     y: moveY,
+            //     duration: 0.5, // Smooth transition
+            //     ease: "power2.out",
+            //   });
+            // });
           },
         })
         .to("#header-image", { width: 600, delay: 2 })
         .to("#nacchan-text", {
-          text: `{ "name": "Nacchan", "breed": "Holland Lop", "colors": ["brown", "white"] }`,
+          text: `{ "name": "Nacchan", "breed": "Holland Lop", "colors": [ "brown", "white" ] }`,
           duration: 2,
         })
         .to(
@@ -72,7 +72,7 @@ export default function Home() {
           "<"
         )
         .to("#resume", { autoAlpha: 1 }, "<")
-        .to(contactIcons, { autoAlpha: 1, stagger: 0.3 });
+        .to(contactIcons, { autoAlpha: 1, stagger: 0.3 }, "<");
     },
     { scope: container }
   );

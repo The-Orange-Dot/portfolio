@@ -73,6 +73,7 @@ const About = () => {
 
   return (
     <section
+      id="about"
       className="w-screen flex flex-col items-center relative"
       ref={container}
     >

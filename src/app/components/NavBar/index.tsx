@@ -4,28 +4,34 @@ import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { SplitText } from "gsap/SplitText";
 import { useTheme } from "next-themes";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
 const NavBar = () => {
   const container = React.useRef(null);
   const { theme, setTheme } = useTheme();
-  gsap.registerPlugin(SplitText);
+  gsap.registerPlugin(SplitText, ScrollToPlugin);
 
   useGSAP(
     () => {
       const links = document.querySelectorAll(".link");
+      const linkRefs = ["about", "skills", "projects"];
 
-      const title = new SplitText("#title", { type: "chars" });
+      links.forEach((btn, index) => {
+        btn.addEventListener("click", () => {
+          gsap.to(window, {
+            duration: 1,
+            scrollTo: { y: `#${linkRefs[index]}`, offsetY: 140 },
+          });
+        });
+      });
 
       gsap
         .timeline({ delay: 2 })
         .to("#navBody", { left: 0 })
-        .to(title.chars, { y: -80, stagger: 0.1 })
+        .to("#title", { autoAlpha: 1, stagger: 0.1 })
         .to(links, { autoAlpha: 1, stagger: 0.2 }, ">0.3");
-
-      // links.forEach((link) => {
-      //   gsap.timeline({ paused: false }).to(link, { autoAlpha: 1 });
-      // });
     },
+
     { scope: container }
   );
 
@@ -36,20 +42,20 @@ const NavBar = () => {
         id="navBody"
       >
         <div className=" flex items-center justify-between sm:px-8 w-full overflow-hidden h-8">
-          <h1 className="text-2xl font-bold translate-y-20" id="title">
+          <h1 className="text-2xl font-bold invisible" id="title">
             Tom Le
           </h1>
 
           <nav className="flex gap-8 font-semibold">
-            <a href="#about" className="link invisible">
+            <button id="about-button" className="link invisible">
               About
-            </a>
-            <a href="#skills" className="link invisible">
+            </button>
+            <button id="skills-button" className="link invisible">
               Skills
-            </a>
-            <a href="#projects" className="link invisible">
+            </button>
+            <button id="projects-button" className="link invisible">
               Projects
-            </a>
+            </button>
             <label className="inline-flex items-center cursor-pointer link invisible">
               <input
                 type="checkbox"
