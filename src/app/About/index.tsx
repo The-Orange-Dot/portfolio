@@ -53,16 +53,21 @@ const About = () => {
           ease: "none",
         })
         .to(".body-text-2", {
-          text: "My expertise lies in building dynamic, user-friendly applications using Next.js and React, and I love the challenge of turning concepts into fully functional digital experiences. From designing intuitive interfaces in Figma to crafting robust backends with Supabase and PostgreSQL databases, I thrive on every step of the development process. Whether it&apos;s deploying seamless solutions on platforms like Vercel, Netlify, Cloudflare, or Coolify, or diving into the nitty-gritty of front-end and back-end integration, I&apos;m always excited to tackle new challenges and create something meaningful",
+          text: "My expertise lies in building dynamic, user-friendly applications using Next.js and React, and I love the challenge of turning concepts into fully functional digital experiences. From designing intuitive interfaces in Figma to crafting robust backends with Supabase and PostgreSQL databases, I thrive on every step of the development process.",
           duration: 2,
           ease: "none",
         })
         .to(".body-text-3", {
+          text: "Whether it&apos;s deploying seamless solutions on platforms like Vercel, Netlify, Cloudflare, or Coolify, or diving into the nitty-gritty of front-end and back-end integration, I&apos;m always excited to tackle new challenges and create something meaningful",
+          duration: 2,
+          ease: "none",
+        })
+        .to(".body-text-4", {
           text: "When I’m not coding, you’ll often find me behind a camera, capturing moments and exploring the world through photography—a creative outlet that keeps me inspired and balanced.",
           duration: 1,
           ease: "none",
         })
-        .to(".body-text-4", {
+        .to(".body-text-5", {
           text: "Let&apos;s build something amazing together!",
           duration: 0.7,
           ease: "none",
@@ -74,32 +79,34 @@ const About = () => {
   return (
     <section
       id="about"
-      className="w-screen flex flex-col items-center relative"
+      className="w-full flex flex-col items-center relative max-sm:px-4 max-sm:min-h-[1200px]"
       ref={container}
     >
       <Image
-        className="absolute z-[-100] object-contain translate-x-[30vw] translate-y-[-10vh] opacity-0"
+        className="absolute top-0 z-[-100] object-contain translate-x-[30vw] translate-y-[-10vh] opacity-0"
         src="/hung_le_self_portrait.jpg"
         alt="Self-portrait of Tom Le"
         id="self-portrait"
         fill
       />
-      <div className="w-full  max-w-[1300px] min-h-[800px]">
+      <div className="w-full max-w-[1300px] min-h-[800px]">
         <p
-          className="font-bold text-xl intro-text"
+          className="font-bold text-xl intro-text max-sm:text-base"
           id="intro-subtitle"
         >{`.`}</p>
-        <h2 className="text-[80px] font-black mb-12 intro-text" id="about-me">
+        <h2
+          className="text-[80px] font-black mb-12 intro-text max-sm:text-[14vw]"
+          id="about-me"
+        >
           .
         </h2>
 
         <div className="flex flex-col gap-8 intro-body-container">
           <p className="text-xl leading-[32px] body-text-1"></p>
           <p className="text-xl leading-[32px] body-text-2"></p>
-
           <p className="text-xl leading-[32px] body-text-3"></p>
-
           <p className="text-xl leading-[32px] body-text-4"></p>
+          <p className="text-xl leading-[32px] body-text-5"></p>
         </div>
       </div>
     </section>

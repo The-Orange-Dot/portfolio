@@ -22,8 +22,13 @@ const Photoshop = ({ size = 100 }: { size?: number }) => {
   );
 
   return (
-    <div className="flex flex-col items-center" ref={container}>
+    <div
+      id="Photoshop"
+      className="flex flex-col items-center invisible"
+      ref={container}
+    >
       <svg
+        className="max-sm:scale-75"
         width={`${size}`}
         height={`${size}`}
         onMouseEnter={() => {

@@ -22,8 +22,13 @@ const Sass = ({ size = 100 }: { size?: number }) => {
   );
 
   return (
-    <div className="flex flex-col items-center" ref={container}>
+    <div
+      id="Sass"
+      className="flex flex-col items-center invisible"
+      ref={container}
+    >
       <svg
+        className="max-sm:scale-75"
         width={`${size}`}
         height={`${size}`}
         xmlns="http://www.w3.org/2000/svg"

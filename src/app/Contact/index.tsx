@@ -42,7 +42,11 @@ const Contact = () => {
       ref={container}
     >
       <div className="flex w-full flex-col max-w-[1400px]">
-        <a href={"/tom_le_resume_swe_2025.pdf"} download>
+        <a
+          href={"/tom_le_resume_swe_2025.pdf"}
+          download
+          className="max-sm:flex max-sm:justify-center"
+        >
           <button
             onMouseEnter={() => {
               if (tl) {
@@ -63,7 +67,7 @@ const Contact = () => {
           </button>
         </a>
 
-        <div className="w-full flex gap-8">
+        <div className="w-full flex gap-8 max-sm:justify-center">
           <Git size={40} link="https://github.com/The-Orange-Dot" />
           <LinkedIn size={40} link="https://www.linkedin.com/in/tom-le-dev/" />
           <Gmail size={40} link="mailto:lethomas710@gmail.com" />

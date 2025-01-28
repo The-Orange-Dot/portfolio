@@ -22,10 +22,15 @@ const Typescript = ({ size = 100 }: { size?: number }) => {
   );
 
   return (
-    <div className="flex flex-col items-center" ref={container}>
+    <div
+      id="Typescript"
+      className="flex flex-col items-center invisible"
+      ref={container}
+    >
       <svg
         width={`${size}`}
         height={`${size}`}
+        className="max-sm:scale-75"
         x="0px"
         y="0px"
         xmlns="http://www.w3.org/2000/svg"

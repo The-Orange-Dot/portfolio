@@ -22,10 +22,15 @@ const Javascript = ({ size = 100 }: { size?: number }) => {
   );
 
   return (
-    <div className="flex flex-col items-center" ref={container}>
+    <div
+      id="Javascript"
+      className="flex flex-col items-center invisible"
+      ref={container}
+    >
       <svg
         width={`${size}`}
         height={`${size}`}
+        className="max-sm:scale-75"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 128 128"
         onMouseEnter={() => {

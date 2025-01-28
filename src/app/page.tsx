@@ -58,7 +58,7 @@ export default function Home() {
             // });
           },
         })
-        .to("#header-image", { width: 600, delay: 2 })
+        .to("#header-image", { width: "50vw", delay: 2 })
         .to("#nacchan-text", {
           text: `{ "name": "Nacchan", "breed": "Holland Lop", "colors": [ "brown", "white" ] }`,
           duration: 2,
@@ -79,16 +79,16 @@ export default function Home() {
 
   return (
     <div
-      className="grid items-center w-screen min-h-screen pb-20 gap-16 sm:px-12"
+      className="grid items-center w-screen overflow-x-hidden min-h-screen pb-20 gap-16 sm:px-12"
       ref={container}
     >
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <section className="flex min-h-screen w-screen justify-center items-center max-sm:flex-col">
+      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start  overflow-x-hidden">
+        <section className="flex min-h-screen w-screen justify-center items-center max-sm:flex-col md:pt-12">
           <div className="flex max-w-[1400px] w-full">
-            <div id="header-image-container" className="w-1/2">
+            <div id="header-image-container" className="w-1/2 max-sm:hidden">
               <div
                 id="header-image"
-                className="flex w-0 h-[600px] justify-center items-center relative max-sm:hidden relative"
+                className="flex w-0 h-[80vh] max-h-[500px] justify-center items-center relative relative"
               >
                 <Image
                   src="/test.jpg"
@@ -110,7 +110,10 @@ export default function Home() {
                 <span id="header-underscore">_</span>
               </h2>
 
-              <p className="font-semibold text-xl mb-14" id="role-subtitle">
+              <p
+                className="font-semibold text-xl max-sm:text-xs max-sm:text-center mb-14"
+                id="role-subtitle"
+              >
                 {``}
               </p>
               <Contact />

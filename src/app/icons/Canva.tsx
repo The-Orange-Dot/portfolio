@@ -22,8 +22,13 @@ const Canva = ({ size = 100 }: { size?: number }) => {
   );
 
   return (
-    <div className="flex flex-col items-center" ref={container}>
+    <div
+      id="Canva"
+      className="flex flex-col items-center invisible"
+      ref={container}
+    >
       <svg
+        className="max-sm:scale-75"
         width={`${size}`}
         height={`${size}`}
         onMouseEnter={() => {

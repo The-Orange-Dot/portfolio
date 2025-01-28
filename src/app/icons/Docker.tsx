@@ -22,8 +22,13 @@ const Docker = ({ size = 100 }: { size?: number }) => {
   );
 
   return (
-    <div className="flex flex-col items-center" ref={container}>
+    <div
+      id="Docker"
+      className="flex flex-col items-center invisible"
+      ref={container}
+    >
       <svg
+        className="max-sm:scale-75"
         width={`${size * 1.2}`}
         height={`${size * 1.2}`}
         xmlns="http://www.w3.org/2000/svg"
