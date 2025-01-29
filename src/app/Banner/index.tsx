@@ -58,7 +58,12 @@ const Banner = () => {
               .to(element, { duration: 0.2 });
           },
         })
-        .to("#header-image", { width: "50vw", delay: 2 })
+        .to("#header-image", {
+          width: "50vw",
+          delay: 2,
+          duration: 1,
+          ease: "power1.out",
+        })
         .to(
           "#role-subtitle",
           {
