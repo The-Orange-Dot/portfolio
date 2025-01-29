@@ -20,19 +20,10 @@ const Banner = () => {
   );
   const [imageInt, setImageInt] = React.useState(0);
 
-  React.useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: "smooth", // Optional: Smooth scroll
-    });
-  }, []);
-
   useGSAP(
     () => {
-      window.onbeforeunload = function () {
-        window.scrollTo(0, 0);
-      };
+      const body = document.querySelector("body") as HTMLBodyElement;
+      body.style.position = "fixed";
 
       const contactIcons = document.querySelectorAll(".contact-icon");
 
@@ -42,13 +33,14 @@ const Banner = () => {
       console.log(rand === 0 ? "Rendering Nacchan" : "Rendering Mocchan");
 
       gsap
-        .timeline()
+        .timeline({})
         .to("#header-title", {
           text: `Hi, I'm Tom<span id="header-underscore">_</span>`,
           duration: 1,
           delay: 0.5,
           ease: "linear",
           onComplete: () => {
+            body.style.position = "";
             const element = document.getElementById("header-underscore");
 
             //Animation for blinking underscore
