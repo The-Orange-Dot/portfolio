@@ -20,13 +20,13 @@ import { TextPlugin } from "gsap/TextPlugin";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap/gsap-core";
 
+gsap.registerPlugin(ScrollTrigger, TextPlugin);
+
 const Skills = () => {
   const container = React.useRef(null);
 
   useGSAP(
     () => {
-      gsap.registerPlugin(ScrollTrigger, TextPlugin);
-
       const intros = gsap.utils.toArray(".skills-text");
       const texts = ["&ltSkills /&gt", "tech_stack"];
 
@@ -102,7 +102,7 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="w-full flex flex-col items-center relative max-sm:px-4 mb-40"
+      className="w-full flex flex-col items-center relative max-sm:px-4 mb-40 max-sm:mb-0"
       ref={container}
     >
       <div className="w-full max-w-[1300px] min-h-[800px]">

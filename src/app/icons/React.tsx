@@ -3,13 +3,15 @@ import React from "react";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap/gsap-core";
 import { SplitText } from "gsap/SplitText";
+
+gsap.registerPlugin(SplitText);
+
 const ReactIcon = ({ size = 100 }: { size?: number }) => {
   const container = React.useRef(null);
   const [tl, setTl] = React.useState<null | gsap.core.Timeline>(null);
 
   useGSAP(
     () => {
-      gsap.registerPlugin(SplitText);
       const splitText = new SplitText(".text", { type: "chars" });
 
       const timeline = gsap

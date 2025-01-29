@@ -8,6 +8,8 @@ import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap/gsap-core";
 import { TextPlugin } from "gsap/TextPlugin";
 
+gsap.registerPlugin(TextPlugin);
+
 const Contact = () => {
   const container = React.useRef(null);
   const [tl, setTl] = React.useState<null | gsap.core.Timeline>(null);
@@ -15,8 +17,6 @@ const Contact = () => {
 
   useGSAP(
     () => {
-      gsap.registerPlugin(TextPlugin);
-
       const timeline = gsap.timeline({ paused: true }).to("#resume", {
         borderRadius: 14,
         backgroundColor: "#fff",

@@ -3,13 +3,13 @@ import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap/gsap-core";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+gsap.registerPlugin(ScrollTrigger);
+
 const VideoComponent = ({ project }: { project: any }) => {
   const component = React.useRef(null);
 
   useGSAP(
     () => {
-      gsap.registerPlugin(ScrollTrigger);
-
       gsap
         .timeline({
           scrollTrigger: {
@@ -26,7 +26,7 @@ const VideoComponent = ({ project }: { project: any }) => {
 
   return (
     <div
-      className="w-full min-h-[300px] border-color border p-12 flex flex-col justify-between opacity-0"
+      className="w-full min-h-[300px] border-color border p-12 max-sm:p-10 flex flex-col justify-between opacity-0"
       ref={component}
     >
       <div className="flex flex-col gap-4 mb-8">
@@ -41,7 +41,7 @@ const VideoComponent = ({ project }: { project: any }) => {
       {project.link ? (
         <a
           href={project.link ? project.link : "#"}
-          className="relative w-full h-full"
+          className="relative w-full h-full video"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -57,14 +57,14 @@ const VideoComponent = ({ project }: { project: any }) => {
             playsInline
             muted
             loop
-            className="z-[-1] w-full h-full video"
+            className="z-[-1] w-full h-full"
           >
             <source src={project.videoSrc} type="video/webm" />
             <source src={project.videoSrc} type="video/mp4" />
           </video>
         </a>
       ) : (
-        <div className="relative w-full h-full">
+        <div className="relative w-full h-full video">
           {project.link ? (
             <div
               className={`font-bold ${

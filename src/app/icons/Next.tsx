@@ -5,6 +5,8 @@ import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap/gsap-core";
 import { SplitText } from "gsap/SplitText";
 
+gsap.registerPlugin(SplitText);
+
 const Next = ({ size = 100 }: { size?: number }) => {
   const { theme } = useTheme();
   const container = React.useRef(null);
@@ -12,7 +14,6 @@ const Next = ({ size = 100 }: { size?: number }) => {
 
   useGSAP(
     () => {
-      gsap.registerPlugin(SplitText);
       const splitText = new SplitText(".text", { type: "chars" });
 
       const timeline = gsap

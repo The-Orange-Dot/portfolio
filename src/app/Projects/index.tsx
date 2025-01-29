@@ -5,13 +5,13 @@ import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap/gsap-core";
 import VideoComponent from "./VideoComponent";
 
+gsap.registerPlugin(ScrollTrigger, TextPlugin);
+
 const Projects = () => {
   const container = React.useRef(null);
 
   useGSAP(
     () => {
-      gsap.registerPlugin(ScrollTrigger, TextPlugin);
-
       const projects = gsap.utils.toArray(".projects-text");
       const texts = ["&ltProjects /&gt", "my_work"];
 
@@ -36,13 +36,15 @@ const Projects = () => {
     <section
       ref={container}
       id="projects"
-      className="w-full flex flex-col items-center mb-40"
+      className="w-full flex flex-col items-center relative max-sm:px-4 max-sm:min-h-[1200px]"
     >
       <div className="w-full max-w-[1300px] min-h-[800px]">
         <span className="font-bold text-xl projects-text">{`.`}</span>
-        <h2 className="text-[80px] font-black mb-12 projects-text">.</h2>
+        <h2 className="text-[80px] font-black mb-12 projects-text max-sm:text-[14vw]">
+          .
+        </h2>
 
-        <div className="w-full min-h-[600px] grid grid-cols-2">
+        <div className="w-full min-h-[600px] grid grid-cols-2 max-sm:grid-cols-1">
           {[
             {
               title: "Tabistar",

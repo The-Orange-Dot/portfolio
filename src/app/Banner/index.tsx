@@ -4,6 +4,9 @@ import Image from "next/image";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import rabbits from "./rabbits.json";
+import { TextPlugin } from "gsap/TextPlugin";
+
+gsap.registerPlugin(TextPlugin);
 
 const Banner = () => {
   const container = React.useRef(null);
@@ -15,16 +18,13 @@ const Banner = () => {
   );
   const [imageInt, setImageInt] = React.useState(0);
 
-  React.useEffect(() => {}, []);
-
   useGSAP(
     () => {
       const contactIcons = document.querySelectorAll(".contact-icon");
 
-      const rand = Math.floor(Math.random() * 2);
+      const rand = Math.floor(Math.random() * 2); //Sets a random number between 0 or 1 to render one of the rabbits
       setImageInt(rand);
       const text = rabbits[rand].text;
-
       console.log(rand === 0 ? "Rendering Nacchan" : "Rendering Mocchan");
 
       gsap
@@ -32,6 +32,7 @@ const Banner = () => {
         .to("#header-title", {
           text: `Hi, I'm Tom<span id="header-underscore">_</span>`,
           duration: 1,
+          delay: 0.5,
           ease: "linear",
           onComplete: () => {
             const element = document.getElementById("header-underscore");
@@ -97,14 +98,17 @@ const Banner = () => {
 
   return (
     <section
-      className="flex min-h-screen w-screen justify-center items-center max-sm:flex-col md:pt-12"
+      className="flex min-h-[95vh] w-screen justify-center items-center max-sm:flex-col max-md:pt-12"
       ref={container}
     >
       <div className="flex max-w-[1400px] w-full">
-        <div id="header-image-container" className="w-1/2 max-sm:hidden">
+        <div
+          id="header-image-container"
+          className="w-1/2 flex items-center max-sm:hidden"
+        >
           <div
             id="header-image"
-            className="flex w-0 max-w-[700px] h-[80vh] max-h-[500px] justify-center items-center relative relative"
+            className="flex w-0 max-w-[700px] h-[80vh] max-h-[600px] justify-center items-center relative"
           >
             <Image
               src={rabbits[imageInt].image}

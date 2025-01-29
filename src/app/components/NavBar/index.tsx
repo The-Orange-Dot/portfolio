@@ -6,10 +6,11 @@ import { SplitText } from "gsap/SplitText";
 import { useTheme } from "next-themes";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
+gsap.registerPlugin(SplitText, ScrollToPlugin);
+
 const NavBar = () => {
   const container = React.useRef(null);
   const { theme, setTheme } = useTheme();
-  gsap.registerPlugin(SplitText, ScrollToPlugin);
 
   useGSAP(
     () => {
@@ -38,10 +39,10 @@ const NavBar = () => {
   return (
     <div ref={container}>
       <div
-        className="w-screen h-20 max-sm:h-24 fixed left-[-100vw] top-0 flex items-center border-b border-1 border-color z-10 navbar-bg"
+        className="w-screen h-20 max-sm:h-24 fixed left-[-100vw] top-0 flex items-center border-b border-1 border-color z-[999] navbar-bg"
         id="navBody"
       >
-        <div className=" flex items-center justify-between sm:px-8 w-full overflow-hidden h-8 max-sm:h-full max-sm:py-4 max-sm:flex-col">
+        <div className="flex items-center justify-between sm:px-8 w-full overflow-hidden h-8 max-sm:h-full max-sm:py-4 max-sm:flex-col">
           <h1 className="text-2xl font-bold invisible" id="title">
             Tom Le
           </h1>
