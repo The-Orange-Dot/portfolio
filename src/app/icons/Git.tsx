@@ -11,6 +11,7 @@ const Git = ({ size = 100, link = "#" }: { size?: number; link: string }) => {
       target="_blank"
       rel="noopener noreferrer"
       className="contact-icon invisible"
+      aria-label="Visit Tom Le's Github Profile"
     >
       <svg
         width={`${size}`}

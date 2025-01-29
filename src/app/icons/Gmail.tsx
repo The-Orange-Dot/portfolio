@@ -7,6 +7,7 @@ const Gmail = ({ size = 100, link = "#" }: { size?: number; link: string }) => {
       target="_blank"
       rel="noopener noreferrer"
       className="contact-icon invisible"
+      aria-label="Email Tom Le"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"

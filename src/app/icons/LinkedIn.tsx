@@ -13,6 +13,7 @@ const LinkedIn = ({
       target="_blank"
       rel="noopener noreferrer"
       className="contact-icon invisible"
+      aria-label="Visit Tom Le's LinkedIn Profile"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
