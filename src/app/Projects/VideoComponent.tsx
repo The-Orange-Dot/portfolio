@@ -10,11 +10,21 @@ const VideoComponent = ({ project }: { project: any }) => {
 
   useGSAP(
     () => {
+      const video = document.querySelector(`.${project.title}`);
+
       gsap
         .timeline({
           scrollTrigger: {
             trigger: ".video",
-            start: "40% bottom",
+            start: "20% bottom",
+            onEnter: () => {
+              //@ts-ignore
+              video?.play();
+            },
+            onEnterBack: () => {
+              //@ts-ignore
+              video?.pause();
+            },
           },
         })
         .to(component.current, {
@@ -29,9 +39,9 @@ const VideoComponent = ({ project }: { project: any }) => {
       className="w-full min-h-[300px] border-color border p-12 max-sm:p-10 flex flex-col justify-between opacity-0"
       ref={component}
     >
-      <div className="flex flex-col gap-4 mb-8">
-        <h3 className="text-2xl font-bold">{`<${project.title} />`}</h3>
-        <p className="min-h-12">{project.description}</p>
+      <div className="flex flex-col gap-4 mb-8 text-center">
+        <h3 className="text-2xl max-sm:text-[16px] font-bold">{`<${project.title} />`}</h3>
+        <p className="min-h-12 ">{project.description}</p>
 
         <p>{`Role:${project.scope.map((role: string[]) => ` ${role}`)}`}</p>
         <p>{`Tech-stack:${project.techStack.map(
@@ -53,11 +63,10 @@ const VideoComponent = ({ project }: { project: any }) => {
             </div>
           ) : null}
           <video
-            autoPlay
             playsInline
             muted
             loop
-            className="z-[-1] w-full h-full"
+            className={`z-[-1] w-full h-full ${project.title}`}
           >
             <source src={project.videoSrc} type="video/webm" />
             <source src={project.videoSrc} type="video/mp4" />
@@ -75,11 +84,10 @@ const VideoComponent = ({ project }: { project: any }) => {
             </div>
           ) : null}
           <video
-            autoPlay
             playsInline
             muted
             loop
-            className="z-[-1] w-full h-full"
+            className={`z-[-1] w-full h-full ${project.title}`}
           >
             <source src={project.videoSrc} type="video/webm" />
             <source src={project.videoSrc} type="video/mp4" />

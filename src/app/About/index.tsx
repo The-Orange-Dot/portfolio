@@ -83,7 +83,7 @@ const About = () => {
       ref={container}
     >
       <Image
-        className="absolute top-0 z-[-100] object-contain translate-x-[30vw] translate-y-[-10vh] opacity-0"
+        className="absolute top-0 z-[-100] object-contain translate-x-[30vw] opacity-0"
         src="/hung_le_self_portrait.jpg"
         alt="Self-portrait of Tom Le"
         id="self-portrait"

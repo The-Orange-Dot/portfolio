@@ -121,14 +121,14 @@ const Banner = () => {
               }}
             />
             <div
-              className="w-full h-full z-10 p-12 bg-[rgba(255,255,255,0.4)] invisible"
+              className="w-full h-full z-10 p-12 bg-[rgba(255,255,255,0.5)] invisible"
               id="header-overlay"
               onMouseLeave={() => {
                 imageText?.pause().progress(0);
                 removeText?.play(0);
               }}
             >
-              <p id="rabbit-text" className="text-base text-black">{``}</p>
+              <p id="rabbit-text" className="text-2xl text-black">{``}</p>
             </div>
           </div>
         </div>

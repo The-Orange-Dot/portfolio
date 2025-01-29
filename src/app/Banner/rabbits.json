@@ -1,12 +1,12 @@
 [
   {
     "image": "/nacchan.jpg",
-    "text": "{ &quotname&quot: &quotNacchan&quot, <br/>   &quotbreed&quot: &quotHolland Lop&quot, <br/>   &quotcolors&quot: [ &quotbrown&quot, &quotwhite&quot ], </br>   &quotdate_of_birth&quot: 2021-03-22T04:00:00.000Z, <br/>   &quotgender&quot: &quotfemale&quot, <br/>   &quotweight&quot: { </br>      &quotkg&quot: 1.52, <br/>      &quotlbs&quot: 3.35<br/>   }, <br/>   &quotfriendliness&quot: 8,<br/>   &quotfavorite_food&quot: &quotapples&quot, <br/>   &quotdislikes&quot: &quotHeavy Metal&quot, <br/>   &quotusb_cords_eaten&quot: 15, <br/>};",
+    "text": "{ &quotname&quot: &quotNacchan&quot, <br/>   &quotanimal&quot: &quotRabbit&quot, <br/>   &quotbreed&quot: &quotHolland Lop&quot, <br/>   &quotcolors&quot: [ &quotbrown&quot, &quotwhite&quot ], </br>   &quotdate_of_birth&quot: 2021-03-22T04:00:00.000Z, <br/>   &quotcountry_of_birth&quot: &quotJapan&quot,<br/>   &quotgender&quot: &quotfemale&quot, <br/>   &quotweight&quot: { </br>      &quotkg&quot: 1.52, <br/>      &quotlbs&quot: 3.35<br/>   }, <br/>   &quotfriendliness&quot: 8,<br/>   &quotfavorite_food&quot: &quotapples&quot, <br/>   &quotdislikes&quot: &quotHeavy Metal&quot, <br/>   &quotusb_cords_eaten&quot: 8 <br/>};",
     "position": "100"
   },
   {
     "image": "/mocchan.jpg",
-    "text": "{ &quotname&quot: &quotMocchan&quot, <br/>   &quotbreed&quot: &quotNetherland Dwarf&quot, <br/>   &quotcolors&quot: [ &quotwhite&quot, &quotblack&quot ], </br>   &quotdate_of_birth&quot: 2020-04-22T04:00:00.000Z, <br/>   &quotgender&quot: &quotfemale&quot, <br/>   &quotweight&quot: { </br>      &quotkg&quot: 1.48, <br/>      &quotlbs&quot: 3.26<br/>   }, <br/>   &quotfriendliness&quot: 3,<br/>   &quotfavorite_food&quot: &quotcilantro&quot, <br/>   &quotdislikes&quot: &quotRabbits&quot, <br/>   &quotusb_cords_eaten&quot: 18, <br/>};",
+    "text": "{ &quotname&quot: &quotMocchan&quot, <br/>   &quotanimal&quot: &quotRabbit&quot, <br/>   &quotbreed&quot: &quotNetherland Dwarf&quot, <br/>   &quotcolors&quot: [ &quotwhite&quot, &quotblack&quot ], </br>   &quotdate_of_birth&quot: 2020-04-22T04:00:00.000Z, <br/>   &quotcountry_of_birth&quot: &quotJapan&quot, <br/>   &quotgender&quot: &quotfemale&quot, <br/>   &quotweight&quot: { </br>      &quotkg&quot: 1.48, <br/>      &quotlbs&quot: 3.26<br/>   }, <br/>   &quotfriendliness&quot: 3,<br/>   &quotfavorite_food&quot: &quotcilantro&quot, <br/>   &quotdislikes&quot: &quotRabbits&quot, <br/>   &quotusb_cords_eaten&quot: 18 <br/>};",
     "position": "0"
   }
 ]

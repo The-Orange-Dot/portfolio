@@ -1,0 +1,104 @@
+[
+  {
+    "title": "Tabistar",
+    "description": "A Next.js web application for finding restaurants, cafes, and events in the Hamptons, New York. Users can check dynamic menus and other information on restaurants, cafes, and other establishments.",
+    "scope": ["Design", "Front-end", "Back-end", "Sys-admin", "SEO"],
+    "techStack": [
+      "Next.js",
+      "Supabase",
+      "Sanity.io",
+      "Vercel",
+      "Node",
+      "Redux",
+      "Sass"
+    ],
+    "video": true,
+    "videoSrc": "/videos/tabistar.webm",
+    "imageSrc": "",
+    "link": "https://tabistar.com"
+  },
+  {
+    "title": "NegiNeko_Tokyo",
+    "description": "Custom-built app for remote connection to control overlay for IRL streamers. Streamers could assign moderaters to help manage and update overlays to through websockets, and changes would reflect in real-time.",
+    "scope": ["Design", "Front-end", "Back-end", "Sys-admin"],
+    "techStack": [
+      "Next.js",
+      "Node.js",
+      "Websocket",
+      "Redux",
+      "Prisma",
+      "PostgreSQL"
+    ],
+    "video": true,
+    "videoSrc": "/videos/negi-neko.mp4",
+    "imageSrc": "",
+    "link": ""
+  },
+  {
+    "title": "Moxie",
+    "description": "A market place that allows sellers to split up the price of items that they are selling. Buyers would purchase tickets and when all the tickets are bought, a seller is randomly chosen to win the item.",
+    "scope": ["Design", "Front-end", "Back-end"],
+    "techStack": [
+      "React",
+      "Redux",
+      "Ruby/Rails",
+      "GSAP",
+      "Prisma",
+      "PostgreSQL"
+    ],
+    "video": true,
+    "videoSrc": "/videos/moxie-preview.mp4",
+    "imageSrc": "",
+    "link": ""
+  },
+  {
+    "title": "Windward_CM",
+    "description": "A static website built with Next.js with custom built GSAP animations.",
+    "scope": ["Design", "Front-end", "SEO"],
+    "techStack": ["Next.js", "Vercel", "GSAP"],
+    "video": true,
+    "videoSrc": "/videos/windward.webm",
+    "imageSrc": "",
+    "link": "https://windwardcm.com"
+  },
+  {
+    "title": "The_American_Hotel",
+    "description": "Redesign a Wordpress Website",
+    "scope": ["Design", "Front-end", "SEO"],
+    "techStack": ["Wordpress", "Elementor"],
+    "video": true,
+    "videoSrc": "/videos/theamericanhotel.webm",
+    "imageSrc": "",
+    "link": "https://theamericanhotel.com"
+  },
+  {
+    "title": "Samantha_Rothberg_Fitness",
+    "description": "Custom build wordpress website with custom GSAP animations",
+    "scope": ["Design", "Front-end", "Back-end", "SEO"],
+    "techStack": ["Wordpress", "Elementor", "GSAP"],
+    "video": true,
+    "videoSrc": "/videos/samrothbergfitness.webm",
+    "imageSrc": "",
+    "link": "https://samantharothbergfitness.com/"
+  },
+  {
+    "title": "The_Hampton_Maid",
+    "description": "Custom design/build of a landing page for R.AIRE on Wix",
+    "scope": ["Design", "Front-end", "SEO"],
+    "techStack": ["Wix"],
+    "video": true,
+    "videoSrc": "/videos/hamptonmaid.webm",
+    "imageSrc": "",
+    "link": "https://www.hamptonmaid.com/raire"
+  },
+  {
+    "title": "Cruz_Brothers_Construction",
+    "description": "Custom build wordpress website with custom GSAP animations",
+    "scope": ["Design", "Front-end", "SEO"],
+    "techStack": ["Wordpress"],
+    "video": true,
+    "videoSrc": "/videos/cruzbrothers.webm",
+    "imageSrc": "",
+    "link": "https://cruzbrothersconstruction.com"
+  }
+]

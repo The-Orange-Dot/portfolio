@@ -30,8 +30,8 @@ const Docker = ({ size = 100 }: { size?: number }) => {
     >
       <svg
         className="max-sm:scale-75"
-        width={`${size * 1.2}`}
-        height={`${size * 1.2}`}
+        width={`${size * 1}`}
+        height={`${size * 1}`}
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 128 128"
         onMouseEnter={() => {
