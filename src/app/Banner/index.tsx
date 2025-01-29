@@ -104,7 +104,7 @@ const Banner = () => {
 
   return (
     <section
-      className="flex min-h-[95vh] w-screen justify-center items-center max-sm:flex-col max-md:pt-12"
+      className="flex min-h-[95vh] max-sm:min-h-[90vh] w-screen justify-center items-center max-sm:flex-col max-md:pt-12"
       ref={container}
     >
       <div className="flex max-w-[1400px] w-full">
