@@ -49,27 +49,27 @@ const About = () => {
         })
         .to(".body-text-1", {
           text: "Hi there! My name is Tom. I&apos;m a full-stack developer. I&apos;m passionate about bringing ideas to life through clean, efficient code and thoughtful design.",
-          duration: 1,
+          duration: 0.25,
           ease: "none",
         })
         .to(".body-text-2", {
           text: "My expertise lies in building dynamic, user-friendly applications using Next.js and React, and I love the challenge of turning concepts into fully functional digital experiences. From designing intuitive interfaces in Figma to crafting robust backends with Supabase and PostgreSQL databases, I thrive on every step of the development process.",
-          duration: 2,
+          duration: 0.5,
           ease: "none",
         })
         .to(".body-text-3", {
           text: "Whether it&apos;s deploying seamless solutions on platforms like Vercel, Netlify, Cloudflare, or Coolify, or diving into the nitty-gritty of front-end and back-end integration, I&apos;m always excited to tackle new challenges and create something meaningful",
-          duration: 2,
+          duration: 0.5,
           ease: "none",
         })
         .to(".body-text-4", {
           text: "When I’m not coding, you’ll often find me behind a camera, capturing moments and exploring the world through photography—a creative outlet that keeps me inspired and balanced.",
-          duration: 1,
+          duration: 0.25,
           ease: "none",
         })
         .to(".body-text-5", {
           text: "Let&apos;s build something amazing together!",
-          duration: 0.7,
+          duration: 0.17,
           ease: "none",
         });
     },

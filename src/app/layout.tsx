@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { gsapInit } from "./gsap/gsapInit";
 import NavBar from "./components/NavBar";
 import { ThemeProvider } from "next-themes";
 
@@ -25,8 +24,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  gsapInit();
-
   return (
     <html lang="en" suppressHydrationWarning>
       <body

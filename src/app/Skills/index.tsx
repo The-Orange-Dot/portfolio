@@ -54,7 +54,6 @@ const Skills = () => {
         })
         .to("#languages", {
           text: `["Languages"]`,
-          duration: 1,
         })
         .fromTo(languageIcons, { y: 5 }, { y: 0, autoAlpha: 1, stagger: 0.2 });
 
@@ -68,7 +67,6 @@ const Skills = () => {
         })
         .to("#frameworks", {
           text: `["Frameworks"]`,
-          duration: 1,
         })
         .fromTo(frameworkIcons, { y: 5 }, { y: 0, autoAlpha: 1, stagger: 0.2 });
 
@@ -82,7 +80,6 @@ const Skills = () => {
         })
         .to("#tech", {
           text: `["Tech"]`,
-          duration: 1,
         })
         .fromTo(techIcons, { y: 5 }, { y: 0, autoAlpha: 1, stagger: 0.2 });
 
@@ -96,7 +93,6 @@ const Skills = () => {
         })
         .to("#design", {
           text: `["Design"]`,
-          duration: 1,
         })
         .fromTo(designIcons, { y: 5 }, { y: 0, autoAlpha: 1, stagger: 0.2 });
     },
