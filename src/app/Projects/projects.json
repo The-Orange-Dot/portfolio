@@ -30,7 +30,7 @@
       "PostgreSQL"
     ],
     "video": true,
-    "videoSrc": "/videos/negi-neko.mp4",
+    "videoSrc": "/videos/negi-neko.webm",
     "imageSrc": "",
     "link": ""
   },
@@ -47,7 +47,7 @@
       "PostgreSQL"
     ],
     "video": true,
-    "videoSrc": "/videos/moxie-preview.mp4",
+    "videoSrc": "/videos/moxie-preview.webm",
     "imageSrc": "",
     "link": ""
   },
