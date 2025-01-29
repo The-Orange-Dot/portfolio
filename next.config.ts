@@ -1,7 +1,6 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
   images: {
     remotePatterns: [
       {
@@ -20,7 +19,7 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: "https",
-        hostname: "qsg40ooowk044gsokgcww840.hung-le.com",
+        hostname: "im-tom.com",
         port: "",
         pathname: "/**",
         search: "",
