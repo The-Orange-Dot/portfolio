@@ -73,7 +73,7 @@
   },
   {
     "title": "Samantha_Rothberg_Fitness",
-    "description": "A custom-built Wordpress website with Elementor with custom GSAP animations.",
+    "description": "A custom-built Wordpress website with Elementor with custom GSAP animations and integrated user booking functionality. Pages have been optimized for SEO.",
     "scope": ["Design", "Front-end", "Back-end", "SEO"],
     "techStack": ["Wordpress", "Elementor", "GSAP"],
     "video": true,
@@ -83,7 +83,7 @@
   },
   {
     "title": "The_Hampton_Maid",
-    "description": "Custom design/build of a landing page for R.AIRE on Wix",
+    "description": "Custom design/build of a landing page for R.AIRE on Wix. The color scheme, typeface, and design has been changed from the Hampton Maid to reflect a high-end dining experience.",
     "scope": ["Design", "Front-end", "SEO"],
     "techStack": ["Wix"],
     "video": true,
@@ -93,7 +93,7 @@
   },
   {
     "title": "Cruz_Brothers_Construction",
-    "description": "Custom build wordpress website with custom GSAP animations",
+    "description": "Custom build wordpress website with custom animations. Worked with Cruz Brothers Construction's internal marketing team to integrate ensure all deliverables and requirements are met.",
     "scope": ["Design", "Front-end", "SEO"],
     "techStack": ["Wordpress"],
     "video": true,

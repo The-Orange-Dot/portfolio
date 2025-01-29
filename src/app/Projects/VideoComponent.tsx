@@ -58,7 +58,7 @@ const VideoComponent = ({
 
   return (
     <div
-      className="w-full min-h-[300px] border-color border p-12 max-sm:p-10 flex flex-col justify-between opacity-0"
+      className="w-full min-h-[300px] border-color border p-12 max-sm:p-10 flex flex-col justify-between opacity-0 max-sm:flex-col-reverse"
       ref={component}
     >
       <div className="flex flex-col gap-4 mb-8 text-center">
