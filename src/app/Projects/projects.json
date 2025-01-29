@@ -1,7 +1,7 @@
 [
   {
     "title": "Tabistar",
-    "description": "A Next.js web application for finding restaurants, cafes, and events in the Hamptons, New York. Users can check dynamic menus and other information on restaurants, cafes, and other establishments.",
+    "description": "A Next.js web application for finding restaurants, cafes, and events in the Hamptons, New York. A custom built API server is used and stored on a Supabase PostgreSQL database.",
     "scope": ["Design", "Front-end", "Back-end", "Sys-admin", "SEO"],
     "techStack": [
       "Next.js",
@@ -53,9 +53,9 @@
   },
   {
     "title": "Windward_CM",
-    "description": "A static website built with Next.js with custom built GSAP animations.",
+    "description": "A static website built for a local business designed with Figma and built with Next.js. The animations are custom built with GSAP and deployed with Vercel.",
     "scope": ["Design", "Front-end", "SEO"],
-    "techStack": ["Next.js", "Vercel", "GSAP"],
+    "techStack": ["Next.js", "Vercel", "GSAP", "Figma"],
     "video": true,
     "videoSrc": "/videos/windward.webm",
     "imageSrc": "",
@@ -63,7 +63,7 @@
   },
   {
     "title": "The_American_Hotel",
-    "description": "Redesign a Wordpress Website",
+    "description": "A redesign for a local restaurant and hotel using Wordpress with Elementor. The design was prototyped with Figma and pages have been optimized for SEO.",
     "scope": ["Design", "Front-end", "SEO"],
     "techStack": ["Wordpress", "Elementor"],
     "video": true,
@@ -73,7 +73,7 @@
   },
   {
     "title": "Samantha_Rothberg_Fitness",
-    "description": "Custom build wordpress website with custom GSAP animations",
+    "description": "A custom-built Wordpress website with Elementor with custom GSAP animations.",
     "scope": ["Design", "Front-end", "Back-end", "SEO"],
     "techStack": ["Wordpress", "Elementor", "GSAP"],
     "video": true,

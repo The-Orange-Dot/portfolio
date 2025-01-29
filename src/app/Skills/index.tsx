@@ -20,6 +20,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { TextPlugin } from "gsap/TextPlugin";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap/gsap-core";
+import PostgreSQL from "../icons/PostgreSQL";
 
 gsap.registerPlugin(ScrollTrigger, TextPlugin);
 
@@ -71,7 +72,13 @@ const Skills = () => {
         })
         .fromTo(frameworkIcons, { y: 5 }, { y: 0, autoAlpha: 1, stagger: 0.2 });
 
-      const techIcons = ["#Redux", "#Docker", "#Vercel", "#Cloudflare"];
+      const techIcons = [
+        "#Redux",
+        "#Docker",
+        "#Vercel",
+        "#Cloudflare",
+        "#PostgreSQL",
+      ];
       gsap
         .timeline({
           scrollTrigger: {
@@ -144,6 +151,7 @@ const Skills = () => {
           <Docker size={70} />
           <Vercel size={70} />
           <Cloudflare size={70} />
+          <PostgreSQL size={70} />
         </div>
 
         <h3

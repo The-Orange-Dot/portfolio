@@ -30,12 +30,21 @@ const VideoComponent = ({
           scrollTrigger: {
             trigger: ".video",
             start: "20% bottom",
+            end: "bottom top",
             onEnter: () => {
-              //@ts-expect-error thinks this isnt a video
+              //@ts-expect-error Will play video when start trigger fires
               video?.play();
             },
             onEnterBack: () => {
-              //@ts-expect-error thinks this isnt a video
+              //@ts-expect-error Will play video when video is in viewport while scrolling back up
+              video?.play();
+            },
+            onLeave: () => {
+              //@ts-expect-error Pauses video when scrolling passed video and video is no longer in viewport
+              video?.pause();
+            },
+            onLeaveBack: () => {
+              //@ts-expect-error Pauses video when scrolling up passed video and video is no longer in viewport
               video?.pause();
             },
           },
