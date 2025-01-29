@@ -127,7 +127,7 @@ const Banner = () => {
               className={`object-cover object-[${rabbits[imageInt].position}%]`}
               fill
               priority
-              sizes="600px"
+              sizes="1000px"
               onMouseEnter={() => {
                 removeText?.pause().progress(0);
                 imageText?.play(0);
