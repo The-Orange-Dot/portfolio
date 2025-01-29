@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Contact from "../Contact";
 import Image from "next/image";
@@ -5,8 +6,9 @@ import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import rabbits from "./rabbits.json";
 import { TextPlugin } from "gsap/TextPlugin";
+import { ScrollToPlugin } from "gsap/all";
 
-gsap.registerPlugin(TextPlugin);
+gsap.registerPlugin(TextPlugin, ScrollToPlugin);
 
 const Banner = () => {
   const container = React.useRef(null);
@@ -18,8 +20,20 @@ const Banner = () => {
   );
   const [imageInt, setImageInt] = React.useState(0);
 
+  React.useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth", // Optional: Smooth scroll
+    });
+  }, []);
+
   useGSAP(
     () => {
+      window.onbeforeunload = function () {
+        window.scrollTo(0, 0);
+      };
+
       const contactIcons = document.querySelectorAll(".contact-icon");
 
       const rand = Math.floor(Math.random() * 2); //Sets a random number between 0 or 1 to render one of the rabbits
@@ -115,6 +129,8 @@ const Banner = () => {
               alt="image"
               className={`object-cover object-[${rabbits[imageInt].position}%]`}
               fill
+              priority
+              sizes="600px"
               onMouseEnter={() => {
                 removeText?.pause().progress(0);
                 imageText?.play(0);

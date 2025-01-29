@@ -1,14 +1,14 @@
-"use client";
-import Image from "next/image";
-import About from "./About";
-import Skills from "./Skills";
-import Projects from "./Projects";
 import React from "react";
 import Banner from "./Banner";
+import dynamic from "next/dynamic";
 
 export default function Home() {
   const date = new Date();
   const year = date.getFullYear();
+
+  const About = dynamic(() => import("./About"));
+  const Skills = dynamic(() => import("./Skills"));
+  const Projects = dynamic(() => import("./Projects"));
 
   return (
     <div className="grid items-center w-full overflow-x-hidden min-h-screen gap-16 sm:px-12">

@@ -5,7 +5,20 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const VideoComponent = ({ project }: { project: any }) => {
+const VideoComponent = ({
+  project,
+}: {
+  project: {
+    title: string;
+    description: string;
+    scope: string[];
+    techStack: string[];
+    video: boolean;
+    videoSrc: string;
+    imageSrc: string;
+    link: string;
+  };
+}) => {
   const component = React.useRef(null);
 
   useGSAP(
@@ -18,11 +31,11 @@ const VideoComponent = ({ project }: { project: any }) => {
             trigger: ".video",
             start: "20% bottom",
             onEnter: () => {
-              //@ts-ignore
+              //@ts-expect-error thinks this isnt a video
               video?.play();
             },
             onEnterBack: () => {
-              //@ts-ignore
+              //@ts-expect-error thinks this isnt a video
               video?.pause();
             },
           },
@@ -43,10 +56,8 @@ const VideoComponent = ({ project }: { project: any }) => {
         <h3 className="text-2xl max-sm:text-[16px] font-bold">{`<${project.title} />`}</h3>
         <p className="min-h-12 ">{project.description}</p>
 
-        <p>{`Role:${project.scope.map((role: string[]) => ` ${role}`)}`}</p>
-        <p>{`Tech-stack:${project.techStack.map(
-          (tech: string[]) => ` ${tech}`
-        )}`}</p>
+        <p>{`Role:${project.scope.map((role) => ` ${role}`)}`}</p>
+        <p>{`Tech-stack:${project.techStack.map((tech) => ` ${tech}`)}`}</p>
       </div>
       {project.link ? (
         <a

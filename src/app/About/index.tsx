@@ -30,11 +30,11 @@ const About = () => {
         gsap
           .timeline({
             scrollTrigger: {
-              trigger: intro as any,
+              trigger: intro as string,
               start: "bottom bottom",
             },
           })
-          .to(intro as any, {
+          .to(intro as string, {
             text: texts[index],
             duration: 1,
           });

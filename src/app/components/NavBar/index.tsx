@@ -11,11 +11,6 @@ gsap.registerPlugin(SplitText, ScrollToPlugin);
 const NavBar = () => {
   const container = React.useRef(null);
   const { theme, setTheme } = useTheme();
-  const [checked, setChecked] = React.useState(false);
-
-  React.useEffect(() => {
-    setChecked(theme === "dark");
-  }, []);
 
   useGSAP(
     () => {

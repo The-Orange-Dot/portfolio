@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Typescript from "../icons/Typescript";
 import Javascript from "../icons/Javascript";
@@ -34,11 +35,11 @@ const Skills = () => {
         gsap
           .timeline({
             scrollTrigger: {
-              trigger: intro as any,
+              trigger: intro as gsap.DOMTarget,
               start: "bottom bottom",
             },
           })
-          .to(intro as any, {
+          .to(intro as gsap.DOMTarget, {
             text: texts[index],
             duration: 1,
           });

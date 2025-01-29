@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { TextPlugin } from "gsap/TextPlugin";
@@ -20,11 +21,11 @@ const Projects = () => {
         gsap
           .timeline({
             scrollTrigger: {
-              trigger: intro as any,
+              trigger: intro as gsap.DOMTarget,
               start: "bottom bottom",
             },
           })
-          .to(intro as any, {
+          .to(intro as gsap.DOMTarget, {
             text: texts[index],
             duration: 1,
           });
