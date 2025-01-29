@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Tom Le's Portfolio Site",
+  title: "Tom Le | Software Developer",
   description:
     "Hi there! My name is Tom. I'm a full-stack developer. I'm passionate about bringing ideas to life through clean, efficient code and thoughtful design.",
 };
