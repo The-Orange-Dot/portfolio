@@ -53,7 +53,7 @@ const NavBar = () => {
             Tom Le
           </h1>
 
-          <nav className="flex gap-8 max-sm:justify-between max-sm:w-screen font-semibold">
+          <nav className="flex gap-8 max-sm:justify-between max-sm:w-full max-sm:px-4 font-semibold">
             <button id="about-button" className="link invisible">
               About
             </button>
