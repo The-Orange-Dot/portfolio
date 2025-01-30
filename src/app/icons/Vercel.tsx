@@ -32,8 +32,8 @@ const Vercel = ({ size = 100 }: { size?: number }) => {
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width={`${size}`}
-        height={`${size}`}
+        width={`${size * 0.9}`}
+        height={`${size * 0.9}`}
         viewBox="0 0 128 128"
         className={`${theme === "dark" ? "invert" : ""} max-sm:scale-75`}
         onMouseEnter={() => {

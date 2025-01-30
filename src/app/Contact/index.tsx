@@ -14,6 +14,11 @@ const Contact = () => {
   const container = React.useRef(null);
   const [tl, setTl] = React.useState<null | gsap.core.Timeline>(null);
   const { theme } = useTheme();
+  const [darkMode, setDarkMode] = React.useState(false);
+
+  React.useEffect(() => {
+    setDarkMode(theme === "dark");
+  }, [theme]);
 
   useGSAP(
     () => {
@@ -60,7 +65,7 @@ const Contact = () => {
             }}
             id="resume"
             className={`bg-black border-[1px] border-black text-white px-4 py-2 text-xl font-bold mb-6 w-40 invisible ${
-              theme === "dark" ? "invert" : ""
+              darkMode ? "invert" : ""
             }`}
           >
             My Resume

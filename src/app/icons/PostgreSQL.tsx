@@ -25,12 +25,12 @@ const PostgreSQL = ({ size = 100 }: { size?: number }) => {
   return (
     <div
       id="PostgreSQL"
-      className="flex flex-col items-center invisible"
+      className="flex flex-col justify-center items-center invisible"
       ref={container}
     >
       <svg
-        width={`${size}`}
-        height={`${size}`}
+        width={`${size * 0.8}`}
+        height={`${size * 0.8}`}
         onMouseEnter={() => {
           tl?.play();
         }}

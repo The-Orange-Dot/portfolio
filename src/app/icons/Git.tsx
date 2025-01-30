@@ -4,6 +4,11 @@ import { useTheme } from "next-themes";
 
 const Git = ({ size = 100, link = "#" }: { size?: number; link: string }) => {
   const { theme } = useTheme();
+  const [darkMode, setDarkMode] = React.useState(false);
+
+  React.useEffect(() => {
+    setDarkMode(theme === "dark");
+  }, [theme]);
 
   return (
     <a
@@ -19,7 +24,7 @@ const Git = ({ size = 100, link = "#" }: { size?: number; link: string }) => {
         viewBox="0 0 100 100"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className={`${theme === "dark" ? "invert" : ""} hover:opacity-50`}
+        className={`${darkMode ? "invert" : ""} hover:opacity-50`}
       >
         <g id="github">
           <g id="github_2">
