@@ -67,7 +67,7 @@ const NavBar = () => {
               <input
                 type="checkbox"
                 className="sr-only peer"
-                defaultChecked={!darkMode}
+                defaultChecked={darkMode}
                 onChange={() => setTheme(theme === "dark" ? "light" : "dark")}
                 aria-label="Darkmode checkbox"
               />
