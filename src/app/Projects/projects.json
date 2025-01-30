@@ -81,6 +81,17 @@
     "imageSrc": "",
     "link": "https://samantharothbergfitness.com/"
   },
+
+  {
+    "title": "Cruz_Brothers_Construction",
+    "description": "Custom build wordpress website with custom animations. Worked with Cruz Brothers Construction's internal marketing team to integrate ensure all deliverables and requirements are met.",
+    "scope": ["Design", "Front-end", "SEO"],
+    "techStack": ["Wordpress", "Elementor"],
+    "video": true,
+    "videoSrc": "/videos/cruzbrothers.webm",
+    "imageSrc": "",
+    "link": "https://cruzbrothersconstruction.com"
+  },
   {
     "title": "The_Hampton_Maid",
     "description": "Custom design/build of a landing page for R.AIRE on Wix. The color scheme, typeface, and design has been changed from the Hampton Maid to reflect a high-end dining experience.",
@@ -90,15 +101,5 @@
     "videoSrc": "/videos/hamptonmaid.webm",
     "imageSrc": "",
     "link": "https://www.hamptonmaid.com/raire"
-  },
-  {
-    "title": "Cruz_Brothers_Construction",
-    "description": "Custom build wordpress website with custom animations. Worked with Cruz Brothers Construction's internal marketing team to integrate ensure all deliverables and requirements are met.",
-    "scope": ["Design", "Front-end", "SEO"],
-    "techStack": ["Wordpress"],
-    "video": true,
-    "videoSrc": "/videos/cruzbrothers.webm",
-    "imageSrc": "",
-    "link": "https://cruzbrothersconstruction.com"
   }
 ]

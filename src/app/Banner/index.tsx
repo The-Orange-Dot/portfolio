@@ -141,7 +141,7 @@ const Banner = () => {
                 removeText?.play(0);
               }}
             >
-              <p id="rabbit-text" className="text-2xl text-black">{``}</p>
+              <p id="rabbit-text" className="text-[1.8vh] text-black">{``}</p>
             </div>
           </div>
         </div>
