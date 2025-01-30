@@ -11,6 +11,11 @@ const Next = ({ size = 100 }: { size?: number }) => {
   const { theme } = useTheme();
   const container = React.useRef(null);
   const [tl, setTl] = React.useState<null | gsap.core.Timeline>(null);
+  const [darkMode, setDarkMode] = React.useState(false);
+
+  React.useEffect(() => {
+    setDarkMode(theme === "dark");
+  }, [theme]);
 
   useGSAP(
     () => {
@@ -35,7 +40,7 @@ const Next = ({ size = 100 }: { size?: number }) => {
         height={`${size}`}
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 128 128"
-        className={`${theme === "dark" ? "invert" : ""} max-sm:scale-75`}
+        className={`${darkMode ? "invert" : ""} max-sm:scale-75`}
         onMouseEnter={() => {
           tl?.play();
         }}
