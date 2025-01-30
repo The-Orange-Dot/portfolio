@@ -29,6 +29,13 @@ export default function RootLayout({
 
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          defer
+          src="https://umami-xg8c4g40kksoc448ckg048s0.hung-le.com/script.js"
+          data-website-id="a0dd8e66-c043-4a63-9c85-496d81674bf8"
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
