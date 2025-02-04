@@ -48,7 +48,7 @@ const Contact = () => {
     >
       <div className="flex w-full flex-col max-w-[1400px]">
         <a
-          href={"/tom_le_resume_dev_2025_website.pdf"}
+          href={"/tom_le_resume_2025_feb.pdf"}
           download
           className="max-sm:flex max-sm:justify-center"
         >
