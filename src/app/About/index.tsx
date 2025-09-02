@@ -58,7 +58,7 @@ const About = () => {
           ease: "none",
         })
         .to(".body-text-3", {
-          text: "Whether it&apos;s deploying solutions on platforms like Vercel, Netlify, Cloudflare, self-hosted on Coolify, or diving into the nitty-gritty of front-end and back-end integration, I&apos;m always excited to tackle new challenges and create something meaningful",
+          text: "Whether it&apos;s deploying solutions on platforms like Vercel, Netlify, Cloudflare, self-hosted on Coolify, or diving into the nitty-gritty of front-end and back-end integration, I&apos;m always excited to tackle new challenges and create something meaningful. I&apos;m currently exploring Rust to expand my skill set and build even more efficient applications.",
           duration: 1,
           ease: "none",
         })
