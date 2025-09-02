@@ -16,6 +16,7 @@ import Vercel from "../icons/Vercel";
 import Cloudflare from "../icons/Cloudflare";
 import Photoshop from "../icons/Photoshop";
 import Canva from "../icons/Canva";
+import Rust from "../icons/Rust";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { TextPlugin } from "gsap/TextPlugin";
 import { useGSAP } from "@gsap/react";
@@ -46,7 +47,13 @@ const Skills = () => {
           });
       });
 
-      const languageIcons = ["#Typescript", "#Javascript", "#HTML", "#CSS"];
+      const languageIcons = [
+        "#Typescript",
+        "#Javascript",
+        "#Rust",
+        "#HTML",
+        "#CSS",
+      ];
       gsap
         .timeline({
           scrollTrigger: {
@@ -126,6 +133,7 @@ const Skills = () => {
         <div className="flex gap-8 py-2 max-sm:gap-0">
           <Typescript size={70} />
           <Javascript size={70} />
+          <Rust size={70} />
           <HTML size={70} />
           <CSS size={70} />
         </div>

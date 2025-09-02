@@ -1,5 +1,23 @@
 [
   {
+    "title": "emma",
+    "description": "An AI solution that enhances the shopping experience on e-commerce sites by using a PostgreSQL database to create highly relevant product suggestions.",
+    "scope": ["Design", "Front-end", "Back-end", "Sys-admin"],
+    "techStack": [
+      "Next.js",
+      "Rust",
+      "Ollama",
+      "Payload",
+      "Redux",
+      "Tailwind",
+      "PostgreSQL"
+    ],
+    "video": true,
+    "videoSrc": "/videos/emma.webm",
+    "imageSrc": "",
+    "link": "https://tabistar.com"
+  },
+  {
     "title": "Tabistar",
     "description": "A Next.js web application for finding restaurants, cafes, and events in the Hamptons, New York. A custom built API server is used and stored on a Supabase PostgreSQL database.",
     "scope": ["Design", "Front-end", "Back-end", "Sys-admin", "SEO"],
