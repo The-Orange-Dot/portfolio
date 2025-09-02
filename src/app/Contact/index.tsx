@@ -16,6 +16,8 @@ const Contact = () => {
   const { theme } = useTheme();
   const [darkMode, setDarkMode] = React.useState(false);
 
+  const resume = "/2025_Sept_Tom_Le_Resume.pdf";
+
   React.useEffect(() => {
     setDarkMode(theme === "dark");
   }, [theme]);
@@ -47,11 +49,7 @@ const Contact = () => {
       ref={container}
     >
       <div className="flex w-full flex-col max-w-[1400px]">
-        <a
-          href={"/tom_le_resume_2025_feb.pdf"}
-          download
-          className="max-sm:flex max-sm:justify-center"
-        >
+        <a href={resume} download className="max-sm:flex max-sm:justify-center">
           <button
             onMouseEnter={() => {
               if (tl) {
