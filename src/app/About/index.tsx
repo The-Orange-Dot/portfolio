@@ -53,12 +53,12 @@ const About = () => {
           ease: "none",
         })
         .to(".body-text-2", {
-          text: "My expertise lies in building dynamic, user-friendly applications using Next.js and React, and I love the challenge of turning concepts into fully functional digital experiences. From designing intuitive and responsive interfaces in Figma to crafting robust backends with Supabase and PostgreSQL databases, I thrive on every step of the development process.",
+          text: "My expertise lies in building dynamic, user-friendly applications using Next.js and React, and I love the challenge of turning concepts into fully functional digital experiences. From designing responsive interfaces in Figma to crafting flexible backends Node.js, I love dabbling into every aspect of the development process. I&apos;m currently exploring Rust to expand my skill set and build even more efficient applications.",
           duration: 1,
           ease: "none",
         })
         .to(".body-text-3", {
-          text: "Whether it&apos;s deploying solutions on platforms like Vercel, Netlify, Cloudflare, self-hosted on Coolify, or diving into the nitty-gritty of front-end and back-end integration, I&apos;m always excited to tackle new challenges and create something meaningful. I&apos;m currently exploring Rust to expand my skill set and build even more efficient applications.",
+          text: "I have deployed my apps and websites on various platforms like Vercel, Netlify, and Cloudflare. However, I now find myself self-hosting on either Coolify or experimenting with Kubernetes and Docker. I&apos;m always excited to tackle new challenges and create something meaningful.",
           duration: 1,
           ease: "none",
         })

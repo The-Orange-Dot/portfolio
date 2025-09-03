@@ -1,13 +1,12 @@
 [
   {
     "title": "emma",
-    "description": "An AI solution that enhances the shopping experience on e-commerce sites by using a PostgreSQL database to create highly relevant product suggestions.",
+    "description": "An AI web app that enhances the shopping experience on e-commerce sites by using a PostgreSQL database with vectorized embedded data to create highly relevant product suggestions.",
     "scope": ["Design", "Front-end", "Back-end", "Sys-admin"],
     "techStack": [
       "Next.js",
       "Rust",
       "Ollama",
-      "Payload",
       "Redux",
       "Tailwind",
       "PostgreSQL"
