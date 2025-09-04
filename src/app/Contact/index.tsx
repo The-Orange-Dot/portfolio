@@ -16,7 +16,7 @@ const Contact = () => {
   const { theme } = useTheme();
   const [darkMode, setDarkMode] = React.useState(false);
 
-  const resume = "/2025_Sept_Tom_Le_Resume.pdf";
+  const resume = "/tom_le_resume_sept_2025_website.pdf";
 
   React.useEffect(() => {
     setDarkMode(theme === "dark");

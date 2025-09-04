@@ -63,13 +63,8 @@ const About = () => {
           ease: "none",
         })
         .to(".body-text-4", {
-          text: "When I’m not coding, I&apos;m often behind a camera, capturing moments and exploring the world through photography — a creative outlet that keeps me inspired and balanced.",
+          text: "My wife and I are passionate about helping rabbits in need. We currently have two of our own, Mocchan and Nacchan, but we also volunteer to foster rabbits from local shelters and rescues. Click on the button below to see a live stream of the rabbits!",
           duration: 0.5,
-          ease: "none",
-        })
-        .to(".body-text-5", {
-          text: "Let&apos;s build something amazing together!",
-          duration: 0.35,
           ease: "none",
         });
     },
@@ -106,7 +101,6 @@ const About = () => {
           <p className="text-xl leading-[32px] body-text-2"></p>
           <p className="text-xl leading-[32px] body-text-3"></p>
           <p className="text-xl leading-[32px] body-text-4"></p>
-          <p className="text-xl leading-[32px] body-text-5"></p>
         </div>
       </div>
     </section>

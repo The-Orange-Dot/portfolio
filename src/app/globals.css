@@ -31,4 +31,5 @@ body {
 
 .reverse-bg-color {
   background: var(--foreground);
+  color: var(--background);
 }

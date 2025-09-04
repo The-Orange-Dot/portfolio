@@ -2,6 +2,7 @@ import React from "react";
 import Banner from "./Banner";
 import dynamic from "next/dynamic";
 import Footer from "./Footer";
+// import LiveVideo from "./LiveVideo";
 
 const About = dynamic(() => import("./About"));
 const Skills = dynamic(() => import("./Skills"));
@@ -13,6 +14,7 @@ export default function Home() {
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start overflow-x-hidden">
         <Banner />
         <About />
+        {/* <LiveVideo /> */}
         <Skills />
         <Projects />
       </main>
